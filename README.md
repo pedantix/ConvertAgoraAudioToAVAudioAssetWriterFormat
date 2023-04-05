@@ -8,7 +8,7 @@ A sample to show how to work with Agora Raw Audio Data Format
 1) Have xcode 14.x installed,(later versions of xcode may break the repo if so open an issue) 
 2) Open the works space
 3) The config files will be missing borth for the app and the extension, so first add the files via `touch`.
-*  `touch Agora\ Stream\ Commentary/Config.xcconfig`
+*  `touch ConvertAgoraAudioToAVAudioAssetWriterFormat.xcconfig`
 
 5) Then add the following to the newly recreated files.
 ```
