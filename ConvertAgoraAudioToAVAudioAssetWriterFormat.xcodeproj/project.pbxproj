@@ -11,6 +11,11 @@
 		EFA6481229DE0EED00A0B451 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6481129DE0EED00A0B451 /* ContentView.swift */; };
 		EFA6481429DE0EEE00A0B451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA6481329DE0EEE00A0B451 /* Assets.xcassets */; };
 		EFA6481729DE0EEE00A0B451 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA6481629DE0EEE00A0B451 /* Preview Assets.xcassets */; };
+		EFA6481F29DE0FA400A0B451 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = EFA6481E29DE0FA400A0B451 /* RtcBasic */; };
+		EFA6482129DE0FA400A0B451 /* SpatialAudio in Frameworks */ = {isa = PBXBuildFile; productRef = EFA6482029DE0FA400A0B451 /* SpatialAudio */; };
+		EFA6482329DE0FB300A0B451 /* RTCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6482229DE0FB300A0B451 /* RTCManager.swift */; };
+		EFA6482529DE105B00A0B451 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6482429DE105B00A0B451 /* Config.swift */; };
+		EFA6482729DE112200A0B451 /* AssetWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6482629DE112200A0B451 /* AssetWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		EFA6481129DE0EED00A0B451 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFA6481329DE0EEE00A0B451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA6481629DE0EEE00A0B451 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFA6482229DE0FB300A0B451 /* RTCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManager.swift; sourceTree = "<group>"; };
+		EFA6482429DE105B00A0B451 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		EFA6482629DE112200A0B451 /* AssetWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetWriter.swift; sourceTree = "<group>"; };
+		EFA6482829DE113400A0B451 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		EFA6482929DE11CD00A0B451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA6482129DE0FA400A0B451 /* SpatialAudio in Frameworks */,
+				EFA6481F29DE0FA400A0B451 /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +63,15 @@
 		EFA6480E29DE0EED00A0B451 /* ConvertAgoraAudioToAVAudioAssetWriterFormat */ = {
 			isa = PBXGroup;
 			children = (
+				EFA6482929DE11CD00A0B451 /* Info.plist */,
 				EFA6480F29DE0EED00A0B451 /* ConvertAgoraAudioToAVAudioAssetWriterFormatApp.swift */,
 				EFA6481129DE0EED00A0B451 /* ContentView.swift */,
 				EFA6481329DE0EEE00A0B451 /* Assets.xcassets */,
 				EFA6481529DE0EEE00A0B451 /* Preview Content */,
+				EFA6482229DE0FB300A0B451 /* RTCManager.swift */,
+				EFA6482429DE105B00A0B451 /* Config.swift */,
+				EFA6482629DE112200A0B451 /* AssetWriter.swift */,
+				EFA6482829DE113400A0B451 /* Config.xcconfig */,
 			);
 			path = ConvertAgoraAudioToAVAudioAssetWriterFormat;
 			sourceTree = "<group>";
@@ -83,6 +100,10 @@
 			dependencies = (
 			);
 			name = ConvertAgoraAudioToAVAudioAssetWriterFormat;
+			packageProductDependencies = (
+				EFA6481E29DE0FA400A0B451 /* RtcBasic */,
+				EFA6482029DE0FA400A0B451 /* SpatialAudio */,
+			);
 			productName = ConvertAgoraAudioToAVAudioAssetWriterFormat;
 			productReference = EFA6480C29DE0EED00A0B451 /* ConvertAgoraAudioToAVAudioAssetWriterFormat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +132,9 @@
 				Base,
 			);
 			mainGroup = EFA6480329DE0EEC00A0B451;
+			packageReferences = (
+				EFA6481D29DE0FA400A0B451 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+			);
 			productRefGroup = EFA6480D29DE0EED00A0B451 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA6482729DE112200A0B451 /* AssetWriter.swift in Sources */,
 				EFA6481229DE0EED00A0B451 /* ContentView.swift in Sources */,
+				EFA6482529DE105B00A0B451 /* Config.swift in Sources */,
+				EFA6482329DE0FB300A0B451 /* RTCManager.swift in Sources */,
 				EFA6481029DE0EED00A0B451 /* ConvertAgoraAudioToAVAudioAssetWriterFormatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +174,7 @@
 /* Begin XCBuildConfiguration section */
 		EFA6481829DE0EEE00A0B451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA6482829DE113400A0B451 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -195,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +289,7 @@
 		};
 		EFA6481B29DE0EEE00A0B451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA6482829DE113400A0B451 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,6 +299,9 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvertAgoraAudioToAVAudioAssetWriterFormat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = peep;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = listen;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +331,9 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ConvertAgoraAudioToAVAudioAssetWriterFormat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = peep;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = listen;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +374,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFA6481D29DE0FA400A0B451 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFA6481E29DE0FA400A0B451 /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFA6481D29DE0FA400A0B451 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+		EFA6482029DE0FA400A0B451 /* SpatialAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFA6481D29DE0FA400A0B451 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = SpatialAudio;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFA6480429DE0EEC00A0B451 /* Project object */;
 }
